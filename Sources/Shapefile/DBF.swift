@@ -45,24 +45,24 @@ public struct DBF {
   }
 
   public struct Header {
-    var dbfVersion: UInt8 = 0x03
-    var lastUpdate: Date = Date.now
-    var numRecords: Int = 0
-    var headerLength: Int = 0
-    var recordLength: Int = 0
-    var incompleteTransaction: Bool = false
-    var isEncrypted: Bool = false
-    var productionMDX: Bool = false
-    var languageDriver: UInt8 = 0
+    public var dbfVersion: UInt8 = 0x03
+    public var lastUpdate: Date = Date.now
+    public var numRecords: Int = 0
+    public var headerLength: Int = 0
+    public var recordLength: Int = 0
+    public var incompleteTransaction: Bool = false
+    public var isEncrypted: Bool = false
+    public var productionMDX: Bool = false
+    public var languageDriver: UInt8 = 0
   }
 
   public struct FieldDescriptor {
-    let name: String
-    let columnType: ColumnType
-    let length: Int
-    let decimalCount: Int
-    let workAreaID: Int
-    let production: Bool
+    public let name: String
+    public let columnType: ColumnType
+    public let length: Int
+    public let decimalCount: Int
+    public let workAreaID: Int
+    public let production: Bool
   }
 
   public enum RecordValue: Equatable {
