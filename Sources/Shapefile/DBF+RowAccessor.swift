@@ -16,8 +16,8 @@
 // limitations under the License.
 //
 
-extension DBF {
-  public func row(_ index: Int) -> [String: DBF.RecordValue] {
+public extension DBF {
+  func row(_ index: Int) -> [String: DBF.RecordValue] {
     let cols = self.fields
     let row = self.records[index]
 

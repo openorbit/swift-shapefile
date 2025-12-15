@@ -75,8 +75,8 @@ public struct DBF {
   }
 
   public struct Record {
-    let deleted: Bool
-    var values: [RecordValue] = []
+    public let deleted: Bool
+    public var values: [RecordValue] = []
   }
 
   public var header: Header

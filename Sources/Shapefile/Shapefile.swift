@@ -42,13 +42,13 @@ public struct Shapefile {
     }
   }
 
-  var count : Int {
+  public var count : Int {
     get {
       return shp.records.count
     }
   }
 
-  subscript (index: Int) -> (Shape, [String : DBF.RecordValue]) {
+  public subscript (index: Int) -> (Shape, [String : DBF.RecordValue]) {
     get {
       (shp.records[index], dbf.row(index))
     }
